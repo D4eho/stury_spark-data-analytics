@@ -12,7 +12,7 @@ Advanced Analytics with Spark 도서에 대한 스터디를 최신 버전의 스
 이처럼 Jupyter에서 제공되는 Docker 이미지 중에서 편의상 all-spark-notebook을 이용하면 아래와 같은 명령어를 통해서 JupyterLab을 실행할 수 있습니다. 아래 명령어에서 <local_path> 부분에는 호스트 PC에서 Docker로 마운트할 경로를 지정해주면 됩니다. 이렇게 하면, 호스트 PC에서 Docker와 같은 볼륨을 사용하면서 파일을 손쉽게 주고 받을 수 있습니다. 또한, Docker 이미지를 추후 삭제한다고 하더라도 작업 내용이 그대로 남게 되고, 다음 이미지에서도 이어 받아서 사용할 수 있게 됩니다.
 
 ```
-docker run  -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v <local_path>:/home/jovyan --name jupyter jupyter/all-spark-notebook:f1811928b3dd
+docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v <local_path>:/home/jovyan --name jupyter jupyter/all-spark-notebook:f1811928b3dd
 ```
 
 본 이미지에서 사용하는 라이브러리 버전은 다음과 같습니다. 
